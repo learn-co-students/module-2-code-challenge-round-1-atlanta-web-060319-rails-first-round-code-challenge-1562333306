@@ -1,0 +1,23 @@
+<% if @heroine.errors.present? %>
+  <ul>
+    <% @heroine.errors.full_messages.each do |msg| %>
+      <li style="color: red"><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for(@heroine) do |f|%>
+<h3><p><%= f.label :name %></p></h3>
+<p><%= f.text_field :name%></p>
+
+<h3><p><%= f.label :super_name %></p></h3>
+<p><%= f.text_field :super_name%></p>
+
+<h3><p><%= f.label "Power"%></p></h3>
+<%= f.collection_select :power_id, @powers, :id, :name%>
+<p><%= f.submit%></p>
+<% end %>
+
+<%= link_to "All Heroines", heroines_path%>
+
