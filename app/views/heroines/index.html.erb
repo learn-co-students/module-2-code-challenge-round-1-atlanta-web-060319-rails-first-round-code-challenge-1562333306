@@ -1,10 +1,20 @@
-<h2>All Heroines</h2>
 
+<h1>All Heroines</h1>
+<nav>
+  <ul>
+    <li>
+      <%= link_to("Add yourself", new_heroine_path) %>
+    </li>
+  </ul>
+</nav>
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to(heroine.super_name, heroine_path(heroine)) %>
     </li>
-    <br>
   <% end %>
 </ul>
+
+
+
+
