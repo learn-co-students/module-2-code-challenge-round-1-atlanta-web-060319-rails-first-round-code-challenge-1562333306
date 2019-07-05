@@ -1,10 +1,11 @@
 class HeroinesController < ApplicationController
   def index
-  	if params.key?("q")
-  		@heroines = Power.find_by(name: params[:q]).heroines
-  	else	
-    	@heroines = Heroine.all
-    end
+  	# if params.key?("q")
+  	# 	@heroines = Power.find_by(name: params[:q]).heroines
+  	# else	
+   #  	@heroines = Heroine.all
+   #  end
+   	@heroines = Heroine.all
   end
 
   def show
