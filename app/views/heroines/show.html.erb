@@ -1,0 +1,15 @@
+<h1>Heroine: <%= @heroine.super_name %> </h1>
+<img src= "http://www.brokenfrontier.com/wp-content/uploads/2013/07/whydcnotmarvelwomen.jpg">
+<h1> <%= @heroine.name %></h1>
+<h3> also known as </h3>
+<h1> <%= @heroine.super_name %></h1>
+<h3> has the power of </h3>
+<h1> <%= link_to @heroine.power.name, power_path(@heroine.power) %></h1>
+
+<br>
+<br>
+<%= link_to "Edit this Badass Lady", edit_heroine_path(@heroine) %><br>
+<%= link_to "All Powers", powers_path %><br>
+<%= link_to "All Heroines", heroines_path %><br>
+
+
