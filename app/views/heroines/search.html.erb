@@ -1,0 +1,9 @@
+<h1>Herioines with that power</h1>
+
+<% @heroines.each do |her| %>
+<% if her.power.name == @power.name %>
+  <li> <%= her.super_name %>br </li>
+<% else %>
+  <%= "No Heroine Found With That Power"%><br>
+<% end %>
+<%end %>
