@@ -1,3 +1,21 @@
 // Place all the styles related to the superheroes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+ background-image: url("https://cdn130.picsart.com/280020165003201.gif");
+}
+
+body {
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+a {
+  color: white;
+}
+
+a:hover {
+  background-color: black;
+}
