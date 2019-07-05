@@ -1,10 +1,18 @@
-<h2>All Heroines</h2>
-
+<h2 style="color: red;">All The Badass Heroines</h2>
+<img src= "https://i.pinimg.com/originals/44/09/a6/4409a69cdaf58291f39947bb716a8960.gif">
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine_path(heroine) %>
     </li>
+    <%= button_to ("Delete"), heroine_path(heroine), method: :delete %>
     <br>
   <% end %>
 </ul>
+
+
+
+<%= link_to "Create a New Power", new_power_path %><br>
+<%= link_to "All Super Powers", powers_path %><br>
+<%= link_to "Create a New Badass Heroine", new_heroine_path %><br>
+

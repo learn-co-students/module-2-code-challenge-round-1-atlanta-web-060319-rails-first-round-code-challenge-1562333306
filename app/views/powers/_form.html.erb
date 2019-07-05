@@ -1,0 +1,29 @@
+
+<img src= "https://i.pinimg.com/originals/ea/72/d0/ea72d0f4afed9fd073a22ec2e15fd13b.gif">
+<% if @power.errors %>
+ <ul>
+   <% @power.errors.full_messages.each do |msg| %>
+     <li style="color: red;"><%= msg %></li>
+   <% end %>
+ </ul>
+<% end %>
+<%= form_for(@power) do |f| %>
+    <%= f.label "name" %>
+    <%= f.text_field :name %> <br><br>
+    <%= f.label "description"%>
+    <%= f.text_area :description %><br><br>
+
+    
+    <%= f.submit %>
+<% end %>
+<br>
+<br>
+
+<%= link_to "All Super Powers", powers_path %><br>
+<%= link_to "Create a New Badass Heroine", new_heroine_path %><br>
+<%= link_to "All Badass Heroines", heroines_path %><br>
+<br>
+<br>
+
+
+<br>
